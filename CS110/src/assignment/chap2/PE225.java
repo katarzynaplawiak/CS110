@@ -16,22 +16,22 @@ public class PE225 {
 	    System.out.print("Enter federal tax withholding rate: ");
 	    double fedTaxWithholdRate = s.nextDouble();
 	    double fedTaxPercent = fedTaxWithholdRate * 100;
-	    double fedTaxAmount = (int)((grossPay * fedTaxWithholdRate) * 100) / 100.0 ;
+	    double fedTaxAmount = grossPay * fedTaxWithholdRate;
 	    System.out.print("Enter state tax withholding rate: ");
 	    double stateTaxWithholdRate = s.nextDouble();
 	    double stateTaxPercent = stateTaxWithholdRate * 100; 
-	    double stateTaxAmount = (int)((grossPay * stateTaxWithholdRate) * 100 )/ 100.0;
-	    double totalTax = (int)((fedTaxAmount + stateTaxAmount)*100) / 100.0;
-	    double netPay = (int)((grossPay - totalTax) * 100) / 100.0;
-	    System.out.println("Employee Name: \t" + name);
-	    System.out.println("Hours Worked: \t" + hoursWorked);
-	    System.out.println("Pay Rate: \t $" + hourPay );
-	    System.out.println("Gross Pay: \t $" + grossPay);
+	    double stateTaxAmount = grossPay * stateTaxWithholdRate;
+	    double totalTax = fedTaxAmount + stateTaxAmount;
+	    double netPay = grossPay - totalTax;
+	    System.out.println("Employee Name:  " + name);
+	    System.out.println("Hours Worked:  " + hoursWorked);
+	    System.out.println("Pay Rate:  $" + hourPay );
+	    System.out.println("Gross Pay:  $" + grossPay);
 	    System.out.println("Deductions: \n"+
-	    "\t Federal Withholding (" + fedTaxPercent + "%): \t $" + fedTaxAmount  + "\n"+
-	    "\t State Withholding (" + stateTaxPercent+ "%): \t $" + stateTaxAmount + "\n" +
-	    "\t Total Deduction: \t $" + totalTax + "\n" + 
-	    "Net Pay: \t $" + netPay);
+	    "  Federal Withholding (" + fedTaxPercent + "%):  $" + (int)(fedTaxAmount * 100) / 100.0  + "\n"+
+	    "  State Withholding (" + stateTaxPercent+ "%):  $" + (int)(stateTaxAmount * 100) / 100.0 + "\n" +
+	    "  Total Deduction:  $" + (int)(totalTax * 100) / 100.0 + "\n" + 
+	    "Net Pay:  $" + (int)(netPay * 100) / 100.0 );
 
 	    
 	}
