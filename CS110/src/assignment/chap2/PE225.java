@@ -7,7 +7,7 @@ public class PE225 {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		System.out.print("Enter employee's name: ");
-		String name = s.next();
+		String EmployeeName = s.next();
 		System.out.print("Enter number of hours worked in a week: ");
 	    double hoursWorked = s.nextDouble();
 	    System.out.print("Enter hourly pay rate: ");
@@ -23,7 +23,7 @@ public class PE225 {
 	    double stateTaxAmount = grossPay * stateTaxWithholdRate;
 	    double totalTax = fedTaxAmount + stateTaxAmount;
 	    double netPay = grossPay - totalTax;
-	    System.out.println("Employee Name:  " + name);
+	    System.out.println("Employee Name:  " + EmployeeName);
 	    System.out.println("Hours Worked:  " + hoursWorked);
 	    System.out.println("Pay Rate:  $" + hourPay );
 	    System.out.println("Gross Pay:  $" + grossPay);
