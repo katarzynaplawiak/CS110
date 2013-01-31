@@ -28,8 +28,8 @@ public class PE332 {
 	}
 
 
-public static double findPointPosition (double xp0, double yp0, double xp1, double yp1, double xp2, double yp2 ){
-	double position = (xp1 - xp0) * (yp2 - yp0) - (xp2 - xp0) * (yp1 - yp0);
+public static double findPointPosition (double xPoint0, double yPoint0, double xPoint1, double yPoint1, double xPoint2, double yPoint2 ){
+	double position = (xPoint1 - xPoint0) * (yPoint2 - yPoint0) - (xPoint2 - xPoint0) * (yPoint1 - yPoint0);
 	return position;
 	}
 	
