@@ -6,15 +6,15 @@ public class PE322 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.println("Enter the point with two coordinates: ");
-		int x1 = input.nextInt();
-		int y1 = input.nextInt();
+		System.out.print("Enter a point with two coordinates: ");
+		double x1 = input.nextInt();
+		double y1 = input.nextInt();
 		
 		if (isInTheCircle(x1, y1)) {
-			System.out.printf("Point (%.1f, %.1f) is in the circle", x1*1.0, y1*1.0);
+			System.out.printf("Point (%.1f %.1f) is in the circle", x1, y1);
 		}
 		else {
-			System.out.printf("Point (%.1f, %.1f) is not in the circle", x1 * 1.0, y1 * 1.0);
+			System.out.printf("Point (%.1f %.1f) is not in the circle", x1, y1);
 			
 		}
 		
@@ -22,7 +22,7 @@ public class PE322 {
 		}
 
 
-public static boolean isInTheCircle (int x, int y)
+public static boolean isInTheCircle (double x, double y)
 {
 	 double distance = Math.pow((Math.pow((x - 0), 2) + Math.pow((y- 0), 2)), 0.5);
 	return (distance<=10);
