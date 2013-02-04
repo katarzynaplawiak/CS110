@@ -20,12 +20,12 @@ public class PE31 {
 		double rootIfDiscriminantIsZero = -b / (2*a);
 		
 		if (discriminant >0){
-			System.out.println("The roots are " + root1 + " and "+ root2 );
+			System.out.printf("The roots are %.5f and %.5f", root1, root2 );
 	
 		}
 		else if (discriminant == 0){
 			System.out.println("The root is " + rootIfDiscriminantIsZero);
-			
+		
 		}
 		else {
 			System.out.println("The equation has no real roots");
