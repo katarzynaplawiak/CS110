@@ -8,48 +8,55 @@ public class Pe61 {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter the number of students: ");
 		int numberOfStudents = input.nextInt();
-		int [] scores = new int [numberOfStudents] ;
+		double [] scores = new double [numberOfStudents] ;
 		
 		System.out.printf("Enter " + scores.length +  " scores: ");
 		for ( int i =0; i < scores.length; i++) {
-			scores [i] = input.nextInt();
+			scores [i] = input.nextDouble();
 		}
-		int max = scores[0];
-		for( int i = 1; i < scores. length; i++ ){
-			if (scores[i]> max ) {
-				max = scores [i];
-				}
-		}
+		double maxValue = findMax(scores);
 		
-		String grade = " ";
 		
-		for (int i = 0; i< scores.length; i++) {
-			
-			if (scores[i] >= (max -10)) {
-				grade=  "A";
-				System.out.printf("Student %d score is %d and grade is %s",i,scores[i], grade  );
+		displayScores (scores, maxValue);
 			}
-			else if (scores[i] >= (max-20)){
-				grade= "B";
-				System.out.printf("Student %d score is %d and grade is %s", i, scores[i], grade  );
+	
+	
+	public static double findMax (double[]array){
+		double max = array[0];
+		for (int i = 0; i< array.length; i++){
+			if (max < array [i]) {
+				max = array[i];
+			}
+			}
+		return max;
+	
+	}
+	
+	
+	public static void displayScores (double[] array, double max){
+		char grade;
+		for (int i = 0; i< array.length; i++) {
+			if (array[i] >= (max -10)) {
+				grade=  'A';
+				System.out.printf("Student %d score is %.1f and grade is %c",i,array[i], grade  );
+			}
+			else if (array[i] >= (max-20)){
+				grade= 'B';
+				System.out.printf("Student %d score is %.1f and grade is %c", i, array[i], grade  );
 			} 
-			else if (scores[i] >= (max-30)){
-				grade= "C";
-				System.out.printf("Student %d score is %d and grade is %s", i,scores[i], grade  );
+			else if (array[i] >= (max-30)){
+				grade= 'C';
+				System.out.printf("Student %d score is %.1f and grade is %c", i,array[i], grade  );
 			}
-			else if (scores[i] >= (max-40)){
-				grade = "D";
-				System.out.printf("Student %d score is %d and grade is %s", i,scores[i], grade  );
+			else if (array[i] >= (max-40)){
+				grade = 'D';
+				System.out.printf("Student %d score is %.1f and grade is %c", i,array[i], grade  );
 			}
 			else {
-				grade = "F";
-				System.out.printf("Student %d score is %d and grade is %s", i,scores[i], grade  );
+				grade = 'F';
+				System.out.printf("Student %d score is %.1f and grade is %c", i,array[i], grade  );
 			}
 			System.out.println();
 		}
-	
-		
-}
-}
-
-
+	} 
+	}
