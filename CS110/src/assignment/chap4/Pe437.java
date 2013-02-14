@@ -10,37 +10,25 @@ public class Pe437 {
 	System.out.print("Enter a decimal number to convert to binary number: ");
 	int number = input.nextInt();
 	
-	System.out.print(decimalToBinary(number));
+	System.out.print("The number " + number + " in binary is " + decimalToBinary(number));
 
 	}
-	public static String decimalToBinary(int num){
+	public static String decimalToBinary(int number){
 		String binary = "";
-		for (int i = 7; i >= 0; i--){
-			
-			int placeValue =(int)( Math.pow(2, i));
-			if ((num % placeValue) == num){
-				binary += "0";
-			}
-			else if ((num % placeValue) == 0){
-				binary += "1";
-				if (i>0){
-					binary = endWithZeroes(binary, i);
-					break;
-				}
-			}
-			else if ( (num % placeValue) < num){
-				binary += "1";
-				num -= placeValue;
-			}
-		}	
-		return binary;
-		}
-	public static String endWithZeroes (String binary, int i){
-		for ( int l = 0; l < (7 -(7-i)); l++){
-			binary+="0";
-		}
-		return binary;
+		int num = number;
 		
+		while ( num!=0){
+			 
+			 if (num %2 ==1){
+				 binary = "1"+ binary;
+			 }
+			 else{
+				 binary = "0"+ binary; 
+			
+			 }
+			 num = num/2;
+		 }
+		 return binary;
 	}
-
 }
+
