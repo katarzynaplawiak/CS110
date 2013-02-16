@@ -13,15 +13,8 @@ public class Pe621 {
 		System.out.print("Enter the number of slots in the bean machine: ");
 		int numberOfSlots = input.nextInt();
 		
-		
-		
-		
-		//checkDirection method
 		 playGame(numberOfBalls, numberOfSlots);
 		
-		//print path
-		// print slots
-
 	}
 	public static void playGame ( int numberOfBalls, int numberOfSlots){
 		
