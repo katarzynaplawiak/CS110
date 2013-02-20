@@ -6,16 +6,16 @@ public class Pe517 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.print("Enter a number n to print an n-by-n matrix: ");
-		int n = input.nextInt();
+		System.out.print("Enter n: ");
+		int number = input.nextInt();
 		
-		printMatrix(n);
+		printMatrix(number);
 
 	}
-	public static void printMatrix(int number){
+	public static void printMatrix(int n){
 		int element;
-		for (int row = 0; row < number; row++){
-			for (int column = 0; column < number; column++){
+		for (int row = 0; row < n; row++){
+			for (int column = 0; column < n; column++){
 				element= (int)(Math.random()*2);
 				System.out.print(element+ " ");
 				
