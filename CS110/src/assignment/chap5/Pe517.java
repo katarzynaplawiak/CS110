@@ -9,10 +9,10 @@ public class Pe517 {
 		System.out.print("Enter a number n to print an n-by-n matrix: ");
 		int n = input.nextInt();
 		
-		displayMatrix(n);
+		printMatrix(n);
 
 	}
-	public static void displayMatrix(int number){
+	public static void printMatrix(int number){
 		int element;
 		for (int row = 0; row < number; row++){
 			for (int column = 0; column < number; column++){
