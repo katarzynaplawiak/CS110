@@ -12,10 +12,10 @@ public class Pe526 {
 	}
 	public static void print100PrimePalindromicNumbers(){
 		final int NUMBERS_PER_LINE = 10;
-		final int AMOUNT_OF_NUMBERS_TO_DISPLAY = 100;
+		final int TOTAL_NUMBERS_TO_DISPLAY = 100;
 		int number = 2;
 		int count  = 0;
-		while (count < AMOUNT_OF_NUMBERS_TO_DISPLAY){
+		while (count < TOTAL_NUMBERS_TO_DISPLAY){
 			if (isPrime(number) && isPalindromic(number)){
 				count++;
 				
