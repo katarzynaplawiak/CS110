@@ -26,6 +26,11 @@ public class PEe531 {
 				&& (sumOfDoubleEvenPlace(number) + sumOfOddPlace(number)) % 10 == 0));
 
 	}
+	public static int getSize(long d) {
+		String s = String.valueOf(d);
+		int size = s.length();
+		return size;
+	}
 
 	public static int sumOfDoubleEvenPlace(long number) {
 		int sum = 0;
@@ -35,18 +40,14 @@ public class PEe531 {
 		int product;
 		for (int i = getSize(number) - 2; i >= 0; i -= 2) {
 			characterDigit = s.charAt(i);
-			digit = Character.getNumericValue(characterDigit);
+			digit = Character.getNumericValue(characterDigit);//try Integer.valueOf()
 			product = digit * 2;
 			sum += getDigit(product);
 		}
 		return sum;
 	}
 
-	public static int getSize(long d) {
-		String s = String.valueOf(d);
-		int size = s.length();
-		return size;
-	}
+	
 
 	public static int sumOfOddPlace(long number) {
 		int sum = 0;
@@ -64,23 +65,16 @@ public class PEe531 {
 	}
 
 	public static int getDigit(int number) {
-		int product = number * 2;
 		int result = 0;
-		if (product >= 10) {
-			result = product % 10 + product / 10;
+		if (number >= 10) {
+			result = number % 10 + number / 10;
 		} else {
 			result = number;
 		}
 		return result;
 	}
 
-	public static long getPrefix(long number, int k) {
-		long result = number;
-		for (int i = 0; i < getSize(number) - k; i++) {
-			result = result / 10;
-		}
-		return result;
-	}
+	
 
 	public static boolean prefixMatched(long number, int d) {
 
@@ -89,5 +83,12 @@ public class PEe531 {
 			match = true;
 		}
 		return match;
+	}
+	public static long getPrefix(long number, int k) {
+		long result = number;
+		for (int i = 0; i < getSize(number) - k; i++) {
+			result = result / 10;
+		}
+		return result;
 	}
 }
