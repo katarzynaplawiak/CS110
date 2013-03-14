@@ -6,7 +6,7 @@ public class Pe72 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.print("Enter a 4-by-4 matric row by row: ");
+		System.out.print("Enter a 4-by-4 matrix row by row: ");
 		double[][] matrix = new double[4][4];
 		for (int row = 0; row < matrix.length; row++) {
 			for (int column = 0; column < matrix[row].length; column++) {
