@@ -13,9 +13,9 @@ public class pe719 {
 		int[][] numbers = createArrayFromInput(input);
 		displayArray(numbers);
 		System.out.println(isConsecutiveFour(numbers));
-	
+
 	}
-	
+
 	public static int[][] createArrayFromInput(Scanner s) {
 		System.out.print("Enter number of rows: ");
 		int rows = s.nextInt();
@@ -31,8 +31,6 @@ public class pe719 {
 		}
 		return array;
 	}
-	
-
 
 	public static void displayArray(int[][] array) {
 		for (int i = 0; i < array.length; i++) {
@@ -43,8 +41,9 @@ public class pe719 {
 		}
 
 	}
-	public static boolean isConsecutiveFour(int [][]array){
-		return (checkHorizontal(array)||checkVertical(array)||checkDiagonal(array));
+
+	public static boolean isConsecutiveFour(int[][] array) {
+		return (checkHorizontal(array) || checkVertical(array) || checkDiagonal(array));
 	}
 
 	public static boolean checkHorizontal(int[][] array) {
@@ -99,8 +98,9 @@ public class pe719 {
 		}
 		return result;
 	}
-	public static boolean checkDiagonal (int [][]array){
-		return (checkLeftDiagonal(array)|| checkRightDiagonal(array));
+
+	public static boolean checkDiagonal(int[][] array) {
+		return (checkLeftDiagonal(array) || checkRightDiagonal(array));
 	}
 
 	public static boolean checkLeftDiagonal(int[][] array) {
@@ -112,7 +112,6 @@ public class pe719 {
 					if (array[row][column] == array[nextRow][nextColumn]) {
 						result = true;
 
-						
 					} else {
 						result = false;
 						break;
@@ -137,7 +136,6 @@ public class pe719 {
 					if (array[row][column] == array[nextRow][nextColumn]) {
 						result = true;
 
-						
 					} else {
 						result = false;
 						break;
