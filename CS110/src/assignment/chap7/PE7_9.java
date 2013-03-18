@@ -11,6 +11,7 @@ public class PE7_9 {
 		char player1 = 'X';
 		char player2 = 'O';
 		boolean end = false;
+		printGrid(grid);
 		while (end == false) {
 			takeTurn(input, player1, grid);
 			end = checkGameStatus(player1, grid);
@@ -65,12 +66,14 @@ public class PE7_9 {
 		if (checkWinner(array)) {
 			System.out.print("Player " + player + " won");
 			end = true;
+
 		}
 
 		else if (checkDraw(array)) {
 			System.out.print("It's a draw");
 			end = true;
 		} else {
+			System.out.println("Continue:");
 			end = false;
 		}
 		return end;
