@@ -6,28 +6,32 @@ public class WordVector {
 	private Direction direction;
 	private int length;
 
-
-	public WordVector(int r, int c, Direction d, int l){
-		row=r;
-		col=c;
+	public WordVector(int r, int c, Direction d, int l) {
+		row = r;
+		col = c;
 		direction = d;
-		length= l;
+		length = l;
 	}
-	public int getCol(){
+
+	public int getCol() {
 		return col;
 	}
-	public Direction getDirection(){
+
+	public Direction getDirection() {
 		return direction;
 	}
-	public int getLength(){
+
+	public int getLength() {
 		return length;
 	}
-	public int getRow(){
+
+	public int getRow() {
 		return row;
 	}
-	public String toString (){
+
+	public String toString() {
 		StringBuffer sb = new StringBuffer();
-		
+
 		sb.append("[row = ");
 		sb.append(String.valueOf(getRow()));
 		sb.append(", col = ");
@@ -37,8 +41,7 @@ public class WordVector {
 		sb.append(" of length ");
 		sb.append(String.valueOf(getLength()));
 		return sb.toString();
-		
+
 	}
-	
 
 }

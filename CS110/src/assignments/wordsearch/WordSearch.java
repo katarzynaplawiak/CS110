@@ -29,7 +29,7 @@ public class WordSearch {
 		}
 	}
 
-	public void solveGrid() {
+	public void solvePuzzle() {
 
 		int rows = scanner.nextInt();
 		int columns = scanner.nextInt();
@@ -139,7 +139,7 @@ public class WordSearch {
 	}
 
 	public WordVector verticalLookup(String s) {
-		
+
 		WordVector finalVector;
 		finalVector = null;
 		for (int j = 0; j < vertView.length; j++) {
