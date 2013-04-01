@@ -192,7 +192,7 @@ public class WordSearch {
 	public void play(String s) {
 		wordVector = lookup(s);
 		if (wordVector == null) {
-			System.out.println("Word not found");
+			System.out.println(s + " not found in the puzzle");
 		} else {
 			String vectorString = wordVector.toString();
 			System.out.println(s + " found at " + vectorString);

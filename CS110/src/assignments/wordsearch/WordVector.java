@@ -7,10 +7,10 @@ public class WordVector {
 	private int length;
 
 	public WordVector(int r, int c, Direction d, int l) {
-		row = r;
-		col = c;
+		this.row = r;
+		this.col = c;
 		direction = d;
-		length = l;
+		this.length = l;
 	}
 
 	public int getCol() {

@@ -3,21 +3,17 @@ package assignments.wordsearch;
 public class Puzzle {
 
 	private char[][] array;
-	private int vectorRow;
-	private int length;
-	private Direction d;
-	private int vectorColumn;
 
 	Puzzle(int rows, int columns) {
-		array = new char[rows][columns];
+		this.array = new char[rows][columns];
 
 	}
 
 	public void placeAsterisks(WordVector vector) {
-		vectorRow = vector.getRow();
-		vectorColumn = vector.getCol();
-		length = vector.getLength();
-		d = vector.getDirection();
+		int vectorRow = vector.getRow();
+		int vectorColumn = vector.getCol();
+		int length = vector.getLength();
+		Direction d = vector.getDirection();
 		for (int i = 0, rowStep = vectorRow, columnStep = vectorColumn; i < length; rowStep += d
 				.getVerticalStep(), columnStep += d.getHorizontalStep(), i++) {
 			array[rowStep][columnStep] = '*';
