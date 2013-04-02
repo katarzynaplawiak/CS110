@@ -18,8 +18,11 @@ public class TestLocation {
 
 		}
 		Location maxValLocation = new Location();
-		maxValLocation =Location.locateLargest(elements);
-		
-		System.out.println("The location of the largest element is " + maxValLocation.getMaxValue() + " at (" +maxValLocation.getRow() +", "+ maxValLocation.getColumn() + ")"); 
+		maxValLocation = Location.locateLargest(elements);
+
+		System.out.println("The location of the largest element is "
+				+ maxValLocation.getMaxValue() + " at ("
+				+ maxValLocation.getRow() + ", " + maxValLocation.getColumn()
+				+ ")");
 	}
 }
