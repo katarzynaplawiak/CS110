@@ -15,15 +15,21 @@ public class Pe912 {
 
 	public static boolean isAnagram(String s1, String s2) {
 		boolean result = false;
-		if (s1.length() == s2.length()) {
+		StringBuffer word2 = new StringBuffer();
+		word2.append(s2);
+		if (s1.length() == s2.length())
 			for (int i = 0; i < s1.length(); i++) {
-				if (s2.indexOf(s1.charAt(i)) >= 0) {
+				int index = word2.toString().indexOf(s1.charAt(i));
+				if (index >= 0) {
 					result = true;
+					word2.deleteCharAt(index);
+				} else {
+					result = false;
+					break;
 				}
 			}
-
-		}
 		return result;
+
 	}
 
 }
