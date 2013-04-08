@@ -15,8 +15,7 @@ public class Pe912 {
 
 	public static boolean isAnagram(String s1, String s2) {
 		boolean result = false;
-		StringBuffer word2 = new StringBuffer();
-		word2.append(s2);
+		StringBuffer word2 = new StringBuffer(s2);
 		if (s1.length() == s2.length())
 			for (int i = 0; i < s1.length(); i++) {
 				int index = word2.toString().indexOf(s1.charAt(i));
