@@ -29,7 +29,7 @@ public class ATM {
 	public void process(Account a, int number) {
 		switch (number) {
 		case (1):
-			System.out.println("The balance is "+ a.getBalance());
+			System.out.println("The balance is " + a.getBalance());
 			break;
 		case (2):
 			a.withdrawOperation();
@@ -39,7 +39,8 @@ public class ATM {
 			break;
 		case (4):
 			return;
-		default : System.out.println("Incorrect input");
+		default:
+			System.out.println("Incorrect input");
 		}
 	}
 

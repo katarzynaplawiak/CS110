@@ -9,16 +9,15 @@ public class TestATM {
 			Scanner input = new Scanner(System.in);
 			System.out.print("\nEnter an id (0-9): ");
 			int idNum = input.nextInt();
-			if (idNum < 0 || idNum >=newATM.getNUMBER_OF_ACCOUNTS()){
+			if (idNum < 0 || idNum >= newATM.getNUMBER_OF_ACCOUNTS()) {
 				System.out.println("Ivalid ID number.Try again");
 				continue;
+			} else {
+				newATM.displayMenu();
+				int number = input.nextInt();
+				Account a = newATM.getAccount(idNum);
+				newATM.process(a, number);
 			}
-			else{
-			newATM.displayMenu();
-			int number = input.nextInt();
-			Account a = newATM.getAccount(idNum);
-			newATM.process(a, number);
 		}
 	}
-}
 }
