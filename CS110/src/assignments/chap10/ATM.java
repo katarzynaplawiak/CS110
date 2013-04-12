@@ -9,6 +9,10 @@ public class ATM {
 		this.accounts = createAccounts(NUMBER_OF_ACCOUNTS);
 	}
 
+	public int getNUMBER_OF_ACCOUNTS() {
+		return NUMBER_OF_ACCOUNTS;
+	}
+
 	public Account[] createAccounts(int n) {
 		Account[] a = new Account[n];
 		for (int i = 0; i < n; i++) {
@@ -35,6 +39,7 @@ public class ATM {
 			break;
 		case (4):
 			return;
+		default : System.out.println("Incorrect input");
 		}
 	}
 
