@@ -10,7 +10,7 @@ public class TestATM {
 			System.out.print("\nEnter an id (0-9): ");
 			int idNum = input.nextInt();
 			if (idNum < 0 || idNum >= newATM.getNUMBER_OF_ACCOUNTS()) {
-				System.out.println("Ivalid ID number.Try again");
+				System.out.println("Incorrect id number.Try again");
 				continue;
 			} else {
 				newATM.displayMenu();
