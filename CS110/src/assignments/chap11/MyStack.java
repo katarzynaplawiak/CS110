@@ -2,7 +2,7 @@ package assignments.chap11;
 
 import java.util.ArrayList;
 
-public class MyStack<String> extends ArrayList<String> {
+public class MyStack extends ArrayList<Object> {
 	MyStack() {
 		super();
 	}
@@ -15,22 +15,22 @@ public class MyStack<String> extends ArrayList<String> {
 		return super.size();
 	}
 
-	public String peek() {
+	public Object peek() {
 		return super.get(super.size() - 1);
 	}
 
-	public String pop() {
-		String last = super.get(super.size() - 1);
+	public Object pop() {
+		Object last = super.get(super.size() - 1);
 		super.remove(last);
 		return last;
 	}
 
-	public void push(String s) {
+	public void push(Object s) {
 		super.add(s);
 	}
 
 	@Override
-	public java.lang.String toString() {
+	public String toString() {
 		return "MyStack " + super.toString();
 	}
 }
