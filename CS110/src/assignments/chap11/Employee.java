@@ -6,7 +6,8 @@ public class Employee extends Person {
 	private MyDate dateHired;
 
 	Employee() {
-		dateHired = new MyDate();
+		super();
+		this.dateHired = new MyDate();
 	}
 
 	public Employee(String name, String adress, int phoneNumber,
@@ -21,6 +22,7 @@ public class Employee extends Person {
 		super();
 		this.office = office;
 		this.salary = salary;
+		this.dateHired = new MyDate();
 	}
 
 	@Override

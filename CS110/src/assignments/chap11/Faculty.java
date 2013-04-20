@@ -4,15 +4,14 @@ public class Faculty extends Employee {
 	private String officeHours;
 	private String rank;
 
+	public Faculty() {
+		super();
+	}
+
 	public Faculty(String officeHours, String rank) {
 		super();
 		this.officeHours = officeHours;
 		this.rank = rank;
-	}
-
-	public Faculty() {
-		super();
-
 	}
 
 	public Faculty(String office, double salary) {

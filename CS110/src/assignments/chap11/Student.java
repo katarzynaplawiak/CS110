@@ -8,6 +8,8 @@ public class Student extends Person {
 	public static final String JUNIOR = "junior";
 	public static final String SENIOR = "senior";
 
+	
+
 	public Student(String classStatus) {
 		super();
 		this.classStatus = classStatus;
@@ -23,6 +25,9 @@ public class Student extends Person {
 		super(name, adress, phoneNumber, eMailAdress);
 		this.classStatus = classStatus;
 
+	}
+	public void setClassStatus(String classStatus) {
+		this.classStatus = classStatus;
 	}
 
 	@Override

@@ -3,18 +3,18 @@ package assignments.chap11;
 public class Staff extends Employee {
 	private String title;
 
-	Staff() {
-
+	public Staff() {
+		super();
 	}
 
-	Staff(String title) {
+	public Staff(String title) {
 		super();
 		this.title = title;
 	}
 
-	public Staff(String office, double salary) {
+	public Staff(String office, double salary, String title) {
 		super(office, salary);
-
+		this.title = title;
 	}
 
 	public Staff(String name, String adress, int phoneNumber,
