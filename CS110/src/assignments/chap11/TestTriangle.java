@@ -18,6 +18,7 @@ public class TestTriangle {
 		triangle.setFilled(filled);
 		System.out.println("Triangle area: " + triangle.getArea()
 				+ "\nperimeter: " + triangle.getPerimeter() + "\ncolor: "
-				+ triangle.getColor() + "\nIs the triangle filled? " + triangle.isFilled());
+				+ triangle.getColor() + "\nIs the triangle filled? "
+				+ triangle.isFilled());
 	}
 }
