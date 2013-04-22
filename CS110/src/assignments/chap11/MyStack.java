@@ -16,17 +16,18 @@ public class MyStack extends ArrayList<Object> {
 	}
 
 	public Object peek() {
-		return super.get(super.size() - 1);
+		return get(getSize() - 1);
 	}
 
 	public Object pop() {
-		Object last = super.get(super.size() - 1);
-		super.remove(last);
+		Object last = get(getSize() - 1);
+		super.remove(getSize() - 1);
 		return last;
 	}
 
-	public void push(Object s) {
+	public Object push(Object s) {
 		super.add(s);
+		return s;
 	}
 
 	@Override
