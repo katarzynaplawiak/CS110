@@ -6,7 +6,6 @@ public class MyDate {
 	private int year;
 	private int month;
 	private int day;
-	private long elapsedTime;
 
 	MyDate() {
 		GregorianCalendar c = new GregorianCalendar();
@@ -43,7 +42,7 @@ public class MyDate {
 		this.day = day;
 	}
 
-	public void setDate(long elapsedTime) {
-		this.elapsedTime = elapsedTime;
+	public MyDate setDate(long elapsedTime) {
+		return new MyDate(elapsedTime);
 	}
 }
