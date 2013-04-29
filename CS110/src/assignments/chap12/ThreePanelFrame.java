@@ -9,7 +9,7 @@ public class ThreePanelFrame extends JFrame {
 	public ThreePanelFrame() {
 		JPanel p1 = new ThreeButtonPanel("Button1", "Button2", "Button3");
 		JPanel p2 = new ThreeButtonPanel("Button4", "Button5", "Button6");
-		add(p2, BorderLayout.EAST);
+		p1.add(p2);
 		add(p1, BorderLayout.CENTER);
 
 	}
