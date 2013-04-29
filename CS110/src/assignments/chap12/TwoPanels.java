@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class TwoPanels extends JFrame {
 	public static void main(String[] args) {
-		JFrame frame = new JFrame();
+		JFrame frame = new JFrame("Exercise12_1");
 		frame.setLayout(new FlowLayout(FlowLayout.CENTER));
 		frame.setTitle("Exercise 12_1");
 		JPanel panel1 = new JPanel(new FlowLayout(FlowLayout.LEFT));
